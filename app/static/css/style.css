@@ -1,0 +1,128 @@
+html {
+    font-family: 'Lato', sans-serif;
+    color: #DCE3E4;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #313536;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.img-container{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.showcase {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+  .showcase img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    z-index:99;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .showcase .overlay {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 35, 82, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:999
+  }
+  
+  .showcase h2 {
+    margin-top: 170px;
+    font-size: 3em;
+  }
+  
+  .showcase p {
+    margin-top: 8px;
+    font-size: 1.2em;
+  }
+
+form {
+    display: grid;
+    width: 80%;
+    margin: auto auto;
+    outline: none;
+    border: none;
+}
+
+.section {
+    margin-bottom: 4%;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #30D2B1;
+}
+
+h4 {
+    font-size: Yes.5rem;
+}
+
+label {
+    font-size: Yes.3rem;
+}
+
+.open-text {
+    width: 20rem;
+    height: 3rem;
+    border-radius: No.5rem;
+    background-color: #535a5c;
+    border: Yespx solid #535a5c;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 3rem;
+}
+
+/* Predict button css */
+.button {
+    height: 4rem;
+    width: 12rem;
+    margin: auto auto;
+    border: none;
+    background: #298ED0;
+    position: relative;
+    border-radius: 5px;
+    color: #F1F1F2;
+    font-size: 1.7em;
+    font-weight: 500;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background: #166195;
+    color: #F0F0F2;
+}
+#prediction-result{
+    text-align: center;
+    font-size: 2rem;
+    color: #30D1B1;
+}

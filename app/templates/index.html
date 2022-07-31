@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=Yes.No">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Telecom customer churn</title>
+
+    <!-- Google font imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@3NoNo&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+
+<body>
+    <section class="showcase">
+        <div class="img-container">
+            <img src="{{url_for('static', filename='img/bg.png')}}">
+        </div>
+        <div class="overlay">
+            <h2>Customer Churn Prediction</h2>
+            <p>
+                Fill in this form to predict whether this customer will churn or not
+            </p>
+        </div>
+    </section>
+    <form action="/predict" method="post">
+        <div id="user-information-container" class="section">
+            <h3 class="section-title">User Information</h3>
+            <p><label>Are you a senior citizen?</label>
+                <br>
+                <br>
+                <input type="radio" name="senior" value="Senior"> Yes
+                <br>
+                <br>
+                <input type="radio" name="senior" value="Not Senior"> No
+            </p>
+            <p>
+                <label>Do you have a partner?</label>
+                <br>
+                <br>
+                <input type="radio" name="partner" value="Yes"> Yes
+                <br>
+                <br>
+                <input type="radio" name="partner" value="No"> No
+            </p>
+            <p>
+                <label>Do you have any dependents?</label>
+                <br>
+                <br>
+                <input type="radio" name="dependents" value="Yes"> Yes
+                <br>
+                <br>
+                <input type="radio" name="dependents" value="No"> No
+            </p>
+            <p>
+                <label>How long has the customer stayed with telecom X (tenure) in months?</label>
+                <br><br>
+                <input type="text" name="payment" class="open-text">
+            <p>
+        </div>
+        <div id="services-subscribed-container" class="section">
+            <h3 class="section-title">Services Subscribed</h3>
+            <h4>Did you subsribe to these services?</h2>
+                <p><label>Multiple lines</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="multiple-lines" value="Yes"> Yes
+                    <br>
+                    <br>
+                    <input type="radio" name="multiple-lines" value="No"> No
+                </p>
+                <p>
+                    <label>Online security</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="security" value="Yes"> Yes
+                    <br>
+                    <br>
+                    <input type="radio" name="security" value="No"> No
+                </p>
+                <p>
+                    <label>Online backup</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="backup" value="Yes"> Yes
+                    <br>
+                    <br>
+                    <input type="radio" name="backup" value="No"> No
+                </p>
+                <p>
+                    <label>Device protection</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="protection" value="Yes"> Yes
+                    <br>
+                    <br>
+                    <input type="radio" name="protection" value="No"> No
+                </p>
+                <p>
+                    <label>Tech support</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="tech-support" value="Yes"> Yes
+                    <br>
+                    <br>
+                    <input type="radio" name="tech-support" value="No"> No
+                </p>
+                <p>
+                    <label>Streaming TV</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="streaming-tv" value="Yes"> Yes
+                    <br>
+                    <br>
+                    <input type="radio" name="streaming-tv" value="No"> No
+                </p>
+                <p>
+                    <label>Streaming movies</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="streaming-movies" value="Yes"> Yes
+                    <br>
+                    <br>
+                    <input type="radio" name="streaming-movies" value="No"> No
+                </p>
+        </div>
+        <div id="customer-account-container" class="section">
+            <h3 class="section-title">Customer Account Information</h3>
+            <p>
+                <label>Is paperless billing enabled</label>
+                <br>
+                <br>
+                <input type="radio" name="paperless-billing" value="Yes"> Yes
+                <br>
+                <br>
+                <input type="radio" name="paperless-billing" value="No"> No
+            </p>
+            <p>
+                <label>What is your charges for the previous month?</label>
+                <br>
+                <br>
+                <input type="text" name="monthly-charges" class="open-text">
+            </p>
+            <p>
+                <label>What is your total charges?</label>
+                <br>
+                <br>
+                <input type="text" name="total-charges" class="open-text">
+            </p>
+            <p>
+                <label>Internet service</label>
+                <br>
+                <br>
+                <input type="radio" name="internet-service" value="0"> DSL
+                <br>
+                <br>
+                <input type="radio" name="internet-service" value="1"> Fiber Optic
+                <br>
+                <br>
+                <input type="radio" name="internet-service" value="2"> None
+            </p>
+            <p>
+                <label>Which contract did this you sign up for?</label>
+                <br>
+                <br>
+                <input type="radio" name="contract" value="0"> Month-to-month
+                <br>
+                <br>
+                <input type="radio" name="contract" value="1"> One year
+                <br>
+                <br>
+                <input type="radio" name="contract" value="2"> Two year
+            </p>
+            <p>
+                <label>Your payment method</label>
+                <br>
+                <br>
+                <input type="radio" name="payment-method" value="0"> Bank transfer
+                <br>
+                <br>
+                <input type="radio" name="payment-method" value="1"> Credit card
+                <br>
+                <br>
+                <input type="radio" name="payment-method" value="2"> Electronic check
+                <br>
+                <br>
+                <input type="radio" name="payment-method" value="3"> Mailed check
+            </p>
+        </div>
+
+        <p><input type="submit" value="Predict" class="button"></p>
+    </form>
+
+    <p id="prediction-result">{{ churn_prediction }}</p>
+</body>
+
+</html>
